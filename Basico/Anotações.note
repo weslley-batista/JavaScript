@@ -1,0 +1,93 @@
+//declarar variaveis
+// let idade = 14;  //let
+// //console.log(idade);
+
+// //constantes
+// const valorFixo = 10;
+// //console.log(valorFixo);
+
+// //tipos primitivos
+// let nome = 'weslley'; // String
+// let valor = 22; //number
+// let estado = true; //boolean
+// let sobrenome; //undefined 
+// let cor = null; //Redefinir um valor
+
+// //tipagem dinamica
+// //Não precisa definar o tipo das variaveis antes de manipular
+//     //typeof [variavel](ver o tipo da variavel)
+    
+// // objetos
+//     //Criar um objetos
+//         let pessoa = {
+//             nome: 'weslley',
+//             idade: 22,
+//             aprovado: true
+//         };
+//         //console.log(pessoa);
+
+// //Arrays
+//         let familia = [['maria', 'camila'], 42, 53, 35]; //um array
+//         //console.log(familia[0][1]);
+
+// // Funçoões
+//         //Verbo + substantivo
+//         let corSite = 'rosa';
+//         function resetarCor(cor){
+//             corSite = cor;
+//         };
+//         //console.log(corSite);
+//         //resetarCor('verde');
+//         //console.log(corSite);
+
+// //Tipos de funcões
+//         //Sem retorno
+//             function imprimirNome(){
+//                 console.log('imprimindo weslley');
+//             };
+//         //Com retorno
+//             function multiplicandoNumero(valor){
+//                 return valor * 2;
+//             };
+//         console.log(multiplicandoNumero(12));
+//         //posso atribuir valor de uma função para variavel
+//         let resultadomultiplicacao = multiplicandoNumero(10);
+
+// //Operadores
+//             //Aritmeticos
+//                 // +, -, *, / ,** (exponencial)
+//             //Atribuição
+//                 // =
+//             //Comparacão
+//                 //Estrita
+//                     //(===), alem dos valores compara o tipo
+//                 //Solta
+//                     //(==), comparacao só os valores
+//             //Operadores ternarios
+//                 // let tipo = pontos > 100 ? 'verdade':'falso'
+//             //logicos
+//                 // &&, ||, !, 
+//             //bitwise
+//                 //
+//Loop for.. in
+
+// const pessoa = {
+//     nome: 'weslley',
+//     idade: 22
+
+// };
+// for (let chave in pessoa){ //Mais facil para utilização do indice
+//     console.log(chave, pessoa.nome);
+// }
+
+// /////
+// const cores =['red', 'green', 'blue'];
+
+// for (let index in cores){
+//     console.log(index, cores[index]);
+// }
+
+// //Loop for.. of
+// for(let cor of cores){ // Imprime diretamente os dados do array
+//     console.log(cor);
+// }
