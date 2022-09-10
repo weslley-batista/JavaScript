@@ -13,10 +13,10 @@ for (var i = 0; i < button.length; i++) {
         e.preventDefault()
         switch (actionButton){
             case 'Get':
-                concatenateRoute = "?page=2";
                 findUser(valueIndex());   
                 break;
             case 'Post':
+                postUsers();
                 break;
             case 'Put':
                 break;
@@ -27,17 +27,28 @@ for (var i = 0; i < button.length; i++) {
 }
 
 function getUsers () {
-    fetch("https://reqres.in/api/users" + concatenateRoute, {})
+    fetch("https://reqres.in/api/users?page=2", {})
     .then((response) => response.json()).then((data) => dataBase = data.data);
 
     return dataBase
 }
+
+function postUsers () {
+    fetch("https://reqres.in/api/users", {
+        method: "POST",
+        headers: {
+            "content-type": "application/json",
+        },
+        body: { name: "Lucas" },
+    }).then((response) => response.json()).then((data) => console.log(data));
+}
+
 function valueIndex () {
     let inputIndex = document.getElementById("inputIndex");
     return parseInt(inputIndex.value);
 }
 
-function findUser ( index ) {
+function findUser ( index) {
     let users = getUsers();
     users.forEach( (user) => {
         if(index === user.id){
